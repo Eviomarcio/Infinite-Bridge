@@ -185,7 +185,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
+  m_MaskInteraction: 1
 --- !u!95 &69440647
 Animator:
   serializedVersion: 3
@@ -302,7 +302,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &433729855
 Prefab:
@@ -325,15 +325,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4523583230039692, guid: d31bf3cb1fc025843905303bbcb3c0b0, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4523583230039692, guid: d31bf3cb1fc025843905303bbcb3c0b0, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4523583230039692, guid: d31bf3cb1fc025843905303bbcb3c0b0, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4523583230039692, guid: d31bf3cb1fc025843905303bbcb3c0b0, type: 2}
       propertyPath: m_LocalRotation.w
@@ -341,7 +341,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4523583230039692, guid: d31bf3cb1fc025843905303bbcb3c0b0, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d31bf3cb1fc025843905303bbcb3c0b0, type: 2}
@@ -466,7 +466,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &721860209
 GameObject:
@@ -972,6 +972,12 @@ MonoBehaviour:
   limiteYMinimo: -1.25
   limiteXMaximo: 2.5
   limiteXMinimo: -2.5
+  velocidadeObjetos: -1.5
+  tamanhaPrefabPonte: 8
+  prefabPonte: {fileID: 1420568023977326, guid: d31bf3cb1fc025843905303bbcb3c0b0,
+    type: 2}
+  prefabBarril: {fileID: 1133033493856770, guid: 766f09761d56aa34b8fe34ad26b107ba,
+    type: 2}
 --- !u!4 &1467536649
 Transform:
   m_ObjectHideFlags: 0
