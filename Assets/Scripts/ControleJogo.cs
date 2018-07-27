@@ -13,17 +13,41 @@ public class ControleJogo : MonoBehaviour {
 
     [Header("Configuração da GamePlay")]
     public float velocidadeObjetos;
+    public float intervaloEntreSpawnBarril;
+    
+
+    [Header("Configuração da Ponte")]
+    public GameObject prefabPonte;
     public float tamanhaPrefabPonte;
 
-    [Header("Configuração dos Prefabs")]
-    public GameObject prefabPonte;
+    [Header("Configuração do Barril")]
     public GameObject prefabBarril;
+    public float posicaoXBarril;
+    public float[] posicaoYBarril;
+    public int[] ordemExicao;
 
-	public void InstanciarPonte(float posicaoX)
+    public void InstanciarPonte(float posicaoX)
     {
         GameObject tempPonte = Instantiate(prefabPonte);
         tempPonte.transform.position = new Vector3(posicaoX + tamanhaPrefabPonte, tempPonte.transform.position.y, 0);
     }
 
+    private void Start()
+    {
+        StartCoroutine("spawnBarril");
+    }
+
+    IEnumerator spawnBarril()
+    {
+        yield return new WaitForSeconds(intervaloEntreSpawnBarril);
+
+        GameObject temBarril = Instantiate(prefabBarril);
+        int rand = Random.Range(0, 2);
+        temBarril.transform.position = new Vector3(posicaoXBarril, posicaoYBarril[rand], 0);
+        temBarril.GetComponent<SpriteRenderer>().sortingOrder = ordemExicao[rand];
+
+        StartCoroutine("spawnBarril");
+
+    }
 
 }

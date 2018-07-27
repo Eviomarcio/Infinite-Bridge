@@ -790,6 +790,53 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31e695d8545c1004d85853970f5e9b5e, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &1200371429
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4813112192365152, guid: 766f09761d56aa34b8fe34ad26b107ba, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4813112192365152, guid: 766f09761d56aa34b8fe34ad26b107ba, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.85798824
+      objectReference: {fileID: 0}
+    - target: {fileID: 4813112192365152, guid: 766f09761d56aa34b8fe34ad26b107ba, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4813112192365152, guid: 766f09761d56aa34b8fe34ad26b107ba, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4813112192365152, guid: 766f09761d56aa34b8fe34ad26b107ba, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4813112192365152, guid: 766f09761d56aa34b8fe34ad26b107ba, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4813112192365152, guid: 766f09761d56aa34b8fe34ad26b107ba, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4813112192365152, guid: 766f09761d56aa34b8fe34ad26b107ba, type: 2}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 212127019697722682, guid: 766f09761d56aa34b8fe34ad26b107ba,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 766f09761d56aa34b8fe34ad26b107ba, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &1293353503
 Prefab:
   m_ObjectHideFlags: 0
@@ -973,11 +1020,16 @@ MonoBehaviour:
   limiteXMaximo: 2.5
   limiteXMinimo: -2.5
   velocidadeObjetos: -1.5
-  tamanhaPrefabPonte: 8
   prefabPonte: {fileID: 1420568023977326, guid: d31bf3cb1fc025843905303bbcb3c0b0,
     type: 2}
+  tamanhaPrefabPonte: 7.9
   prefabBarril: {fileID: 1133033493856770, guid: 766f09761d56aa34b8fe34ad26b107ba,
     type: 2}
+  posicaoX: 5
+  posicaoY:
+  - -0.87
+  - 1.08
+  ordemExicao: 0100000004000000
 --- !u!4 &1467536649
 Transform:
   m_ObjectHideFlags: 0
