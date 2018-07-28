@@ -1,10 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ControleJogo : MonoBehaviour {
 
+    [Header("Personagem")]
+    public Transform tPlayer;
     public float velocidadePersonagem;
+
     [Header("Configuração limeite Movimento Personagem")]
     public float limiteYMaximo;
     public float limiteYMinimo;
@@ -14,6 +19,7 @@ public class ControleJogo : MonoBehaviour {
     [Header("Configuração da GamePlay")]
     public float velocidadeObjetos;
     public float intervaloEntreSpawnBarril;
+    public int pontosGanhoPorBarril;
     
 
     [Header("Configuração da Ponte")]
@@ -25,6 +31,14 @@ public class ControleJogo : MonoBehaviour {
     public float posicaoXBarril;
     public float[] posicaoYBarril;
     public int[] ordemExicao;
+
+    [Header("HUB")]
+    public Text txtPontos;
+    private int pontos;
+
+    [Header("FX")]
+    public AudioSource Sfx;
+    public AudioClip fxPontos;
 
     public void InstanciarPonte(float posicaoX)
     {
@@ -48,6 +62,21 @@ public class ControleJogo : MonoBehaviour {
 
         StartCoroutine("spawnBarril");
 
+    }
+
+    public void pontuar()
+    {
+        pontos += pontosGanhoPorBarril;
+
+        txtPontos.text = "PONTOS: " + pontos.ToString();
+
+        Sfx.PlayOneShot(fxPontos, 0.7f);
+
+    }
+
+    public void GameOver()
+    {
+        SceneManager.LoadScene("gameover");
     }
 
 }

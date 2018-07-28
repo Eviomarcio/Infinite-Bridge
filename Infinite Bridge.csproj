@@ -219,6 +219,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Comandos.cs" />
     <Compile Include="Assets\Scripts\ControleBarril.cs" />
     <Compile Include="Assets\Scripts\ControleJogo.cs" />
     <Compile Include="Assets\Scripts\ControlePlayer.cs" />

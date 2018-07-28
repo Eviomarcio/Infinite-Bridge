@@ -571,7 +571,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
-  m_Pitch: 1
+  m_Pitch: 3
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -677,11 +677,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 2500f85bc6747d84da82e1587fffebfc, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.7
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -789,53 +789,6 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31e695d8545c1004d85853970f5e9b5e, type: 2}
-  m_IsPrefabParent: 0
---- !u!1001 &1200371429
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4813112192365152, guid: 766f09761d56aa34b8fe34ad26b107ba, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4813112192365152, guid: 766f09761d56aa34b8fe34ad26b107ba, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -0.85798824
-      objectReference: {fileID: 0}
-    - target: {fileID: 4813112192365152, guid: 766f09761d56aa34b8fe34ad26b107ba, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4813112192365152, guid: 766f09761d56aa34b8fe34ad26b107ba, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4813112192365152, guid: 766f09761d56aa34b8fe34ad26b107ba, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4813112192365152, guid: 766f09761d56aa34b8fe34ad26b107ba, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4813112192365152, guid: 766f09761d56aa34b8fe34ad26b107ba, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4813112192365152, guid: 766f09761d56aa34b8fe34ad26b107ba, type: 2}
-      propertyPath: m_RootOrder
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 212127019697722682, guid: 766f09761d56aa34b8fe34ad26b107ba,
-        type: 2}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 766f09761d56aa34b8fe34ad26b107ba, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1293353503
 Prefab:
@@ -1014,22 +967,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fbdbc080b8c103428d2f7a85a9b1f57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tPlayer: {fileID: 1530060331}
   velocidadePersonagem: 1.5
   limiteYMaximo: -1.03
   limiteYMinimo: -1.25
   limiteXMaximo: 2.5
   limiteXMinimo: -2.5
-  velocidadeObjetos: -1.5
+  velocidadeObjetos: -2
+  intervaloEntreSpawnBarril: 0.5
+  pontosGanhoPorBarril: 10
   prefabPonte: {fileID: 1420568023977326, guid: d31bf3cb1fc025843905303bbcb3c0b0,
     type: 2}
   tamanhaPrefabPonte: 7.9
   prefabBarril: {fileID: 1133033493856770, guid: 766f09761d56aa34b8fe34ad26b107ba,
     type: 2}
-  posicaoX: 5
-  posicaoY:
+  posicaoXBarril: 5
+  posicaoYBarril:
   - -0.87
-  - 1.08
+  - -1.08
   ordemExicao: 0100000004000000
+  txtPontos: {fileID: 1709389479}
+  Sfx: {fileID: 764991881}
+  fxPontos: {fileID: 8300000, guid: 83073a8a47bd54548acbc9339aa51636, type: 3}
 --- !u!4 &1467536649
 Transform:
   m_ObjectHideFlags: 0

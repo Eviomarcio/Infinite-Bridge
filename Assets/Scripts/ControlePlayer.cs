@@ -48,4 +48,9 @@ public class ControlePlayer : MonoBehaviour {
         }
 
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        controleJogo.GameOver();
+    }
 }

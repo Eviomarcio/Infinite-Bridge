@@ -6,6 +6,7 @@ public class ControleBarril : MonoBehaviour {
 
     private ControleJogo controleJogo;
     private Rigidbody2D rBody;
+    private bool pontuado;
 
 	// Use this for initialization
 	void Start () {
@@ -20,6 +21,12 @@ public class ControleBarril : MonoBehaviour {
 	void Update () {
 
         rBody.velocity = new Vector2(controleJogo.velocidadeObjetos, 0);
+
+        if (transform.position.x <= controleJogo.tPlayer.position.x && pontuado == false)
+        {
+            controleJogo.pontuar();
+            pontuado = true;
+        }
 
 	}
 }
